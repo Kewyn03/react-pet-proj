@@ -35,10 +35,11 @@
       ]
     }
   },
-  //  "include": [
-  //    "**/*.ts",
-  //    "**/*.tsx",
-  //  ],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "src/app/types/global.d.ts"
+  ],
   //  "exclude": [
   //    "node_modules"
   //  ],
