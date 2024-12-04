@@ -1,6 +1,6 @@
 @use 'reset';
-@use 'variables/global';
-@use "themes/normal";
+@use 'variables/global.css';
+@use "themes/normal.css";
 @use "themes/dark";
 
 .app {

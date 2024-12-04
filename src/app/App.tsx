@@ -1,7 +1,7 @@
 import React, {FC} from 'react'
 import './styles/index.scss'
-import {useTheme} from './theme/useTheme'
-import {classNames} from './helpers/classNames'
+import {useTheme} from 'app/providers/ThemeProvider'
+import {classNames} from 'shared/lib/classNames'
 
 
 const App: FC = ({children}) => {

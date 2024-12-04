@@ -1,9 +1,8 @@
 {
   "compilerOptions": {
-
     "lib": [
       "dom",
-      "dom.iterable",
+      "dom.iterable"
     ],
     // base options
 
@@ -11,43 +10,41 @@
     "allowJs": true,
     "skipLibCheck": true,
     "module": "ESNext",
-//    "moduleDetection": "force",
+    //    "moduleDetection": "force",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-
-//    "noEmit": true, break webpack build
+    //    "noEmit": true, break webpack build
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "react-jsx",
-
     // strictness
 
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
     "noImplicitAny": true,
-
-//    "plugins": [
-//      {
-//        "name": "next"
-//      }
-//    ],
-//    "paths": {
-//      "@/*": [
-//        "./src/*"
-//      ]
-//    }
+    //    "plugins": [
+    //      {
+    //        "name": "next"
+    //      }
+    //    ],
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "./src/*"
+      ]
+    }
   },
-//  "include": [
-//    "**/*.ts",
-//    "**/*.tsx",
-//  ],
-//  "exclude": [
-//    "node_modules"
-//  ],
-   "ts-node": {
-     "compilerOptions": {
-       "module": "CommonJS"
-     }
-   }
+  //  "include": [
+  //    "**/*.ts",
+  //    "**/*.tsx",
+  //  ],
+  //  "exclude": [
+  //    "node_modules"
+  //  ],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
 }
