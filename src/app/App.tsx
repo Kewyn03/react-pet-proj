@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, Suspense } from 'react'
 import './styles/index.scss'
 import { useTheme } from 'app/providers/ThemeProvider'
 import { classNames } from 'shared/lib/classNames'
@@ -10,11 +10,14 @@ const App: FC = ({ children }) => {
 
   return (
     <div className={classNames('app', {}, [theme])}>
-      <Navbar />
-      <div className='content-page'>
-        <Sidebar />
-        {children}
-      </div>
+      {/*suspense for i18n*/}
+      <Suspense fallback={''}>
+        <Navbar />
+        <div className='content-page'>
+          <Sidebar />
+          {children}
+        </div>
+      </Suspense>
     </div>
   )
 }
