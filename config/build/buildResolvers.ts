@@ -1,4 +1,5 @@
 import { ResolveOptions } from 'webpack'
+import path from 'path'
 import { BuildOptions } from './types/config'
 
 export function buildResolvers(options: BuildOptions): ResolveOptions {
@@ -8,6 +9,6 @@ export function buildResolvers(options: BuildOptions): ResolveOptions {
         modules: [options.paths.src, 'node_modules'],
         mainFiles: ['index'],
         // abc/asd
-        alias: {},
+        alias: {}
     }
 }
