@@ -4,6 +4,7 @@
   "main": "index.ts",
   "scripts": {
     "dev": "webpack serve --env port=3000",
+    "prod": "webpack serve --env mode=production port=3000",
     "unit": "jest --config ./config/jest/jest.config.ts",
     "build:dev": "npx webpack --config webpack.config.ts --env mode=development",
     "build:prod": "npx webpack --config webpack.config.ts --env mode=production",
