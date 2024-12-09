@@ -42,7 +42,7 @@ export const parameters = {
         }
     }
 }
-
+// i18nDecorator
 export const decorators = [
     ThemeDecorator(Theme.LIGHT), i18nDecorator, StyleDecorator, RouterDecorator
 ]

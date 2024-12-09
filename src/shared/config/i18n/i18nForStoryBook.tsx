@@ -4,14 +4,15 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import { initReactI18next } from 'react-i18next'
 
 i18n
-    .use(initReactI18next)
     .use(Backend) // lazy loads translations from /public/locales
     .use(LanguageDetector) // detect user language
+    .use(initReactI18next)
     .init({
-        ns: ['common'],
-        fallbackLng: 'ru',
+        fallbackLng: 'en',
         lng: 'en',
         debug: true,
+        // preload needed for loki, SSR
+        preload: ['en'],
         interpolation: {
             escapeValue: false
         }
