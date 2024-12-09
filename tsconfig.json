@@ -46,6 +46,7 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
+    "**/*.scss",
     "src/app/types/global.d.ts",
     "./config/jest/setupTests.ts"
   ],

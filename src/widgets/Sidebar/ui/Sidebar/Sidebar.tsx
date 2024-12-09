@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher'
 import { LangSwitcher } from 'widgets/LangSwitcher'
 import { useTranslation } from 'react-i18next'
+import { Button, ThemeButton } from 'shared/ui/Button/Button'
 import cls from './Sidebar.module.scss'
 
 interface ISidebarProps {
@@ -22,13 +23,14 @@ export const Sidebar = ({ className = '' }: ISidebarProps) => {
                 className
             ])}
         >
-            <button
+            <Button
                 data-testid='sidebar-toggle'
                 type='button'
                 onClick={onToggle}
+                theme={ThemeButton.OUTLINE}
             >
                 {t('toggle')}
-            </button>
+            </Button>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher className={cls.lang} />
