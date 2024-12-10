@@ -9,8 +9,8 @@ import {
     RouterDecorator
 } from 'shared/config/storybook/RouterDecorator/RouterDecorator'
 import {
-    usei18nDecorator
-} from 'shared/config/storybook/i18nDecorator/i18nDecorator'
+    useI18nDecorator
+} from 'shared/config/storybook/i18nDecorator/useI18nDecorator'
 
 export const globalTypes = {
     locale: {
@@ -42,7 +42,7 @@ export const parameters = {
         }
     }
 }
-// usei18nDecorator
+
 export const decorators = [
-    ThemeDecorator(Theme.LIGHT), usei18nDecorator, StyleDecorator, RouterDecorator
+    ThemeDecorator(Theme.LIGHT), useI18nDecorator, StyleDecorator, RouterDecorator
 ]
