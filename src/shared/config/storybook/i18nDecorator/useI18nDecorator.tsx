@@ -4,7 +4,7 @@ import { I18nextProvider } from 'react-i18next'
 import i18n from 'shared/config/i18n/i18nForStoryBook'
 import { StoryContext } from '@storybook/addons'
 
-export const i18nDecorator = (StoryComponent: Story, context: StoryContext) => {
+export const useI18nDecorator = (StoryComponent: Story, context: StoryContext) => {
     const { locale } = context.globals
 
     useEffect(() => {
