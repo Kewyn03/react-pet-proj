@@ -14,18 +14,7 @@ export const Navbar = ({ className = '' }: INavbarProps) => {
     const { t } = useTranslation()
     return (
         <div className={classNames(cls.Navbar, {}, [className])}>
-            <div className={cls.links}>
-                <AppLink
-                    theme={AppLinkTheme.SECONDARY}
-                    to={RoutePath.main}
-                    className={cls.mainLink}
-                >
-                    {t('main')}
-                </AppLink>
-                <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.about}>
-                    {t('about')}
-                </AppLink>
-            </div>
+            <div className={cls.links} />
         </div>
     )
 }
