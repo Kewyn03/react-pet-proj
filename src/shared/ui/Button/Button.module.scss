@@ -1,31 +1,36 @@
 .Button {
     cursor: pointer;
-    color: var(--primary-color);
+    color: var(--text-color);
     padding: 6px 15px;
 }
 
-.clear {
+.clear,
+.clearInverted {
     padding: 0;
     border: none;
     background: none;
     outline: none;
 }
 
+.clearInverted {
+    color: var(--inverted-text-color);
+}
+
 .outline {
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
     background: none;
 }
 
 .background {
     background: var(--bg-color);
-    color: var(--primary-color);
+    color: var(--text-color);
     border: none;
 }
 
 .backgroundInverted {
     background: var(--inverted-bg-color);
-    color: var(--inverted-primary-color);
+    color: var(--inverted-text-color);
     border: none;
 }
 
