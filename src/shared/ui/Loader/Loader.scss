@@ -12,9 +12,9 @@
 
 .lds-ellipsis div {
     position: absolute;
-    top: 33.33333px;
-    width: 13.33333px;
-    height: 13.33333px;
+    top: 33.3333px;
+    width: 13.3333px;
+    height: 13.3333px;
     border-radius: 50%;
     background: var(--inverted-bg-color);
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
@@ -44,6 +44,7 @@
     0% {
         transform: scale(0);
     }
+
     100% {
         transform: scale(1);
     }
@@ -53,6 +54,7 @@
     0% {
         transform: scale(1);
     }
+
     100% {
         transform: scale(0);
     }
@@ -62,6 +64,7 @@
     0% {
         transform: translate(0, 0);
     }
+
     100% {
         transform: translate(24px, 0);
     }
