@@ -4,3 +4,6 @@
 .env
 /extractedTranslations
 /storybook-static
+
+.loki/report.html
+.loki/report.json
