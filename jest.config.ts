@@ -13,12 +13,12 @@ export default {
     testEnvironment: 'jsdom',
     coveragePathIgnorePatterns: ['\\\\node_modules\\\\'],
     moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
-    moduleDirectories: ['node_modules', 'src'],
+    moduleDirectories: ['node_modules', 'src', 'src/entities'],
     testMatch: ['<rootDir>/src/**/*(*.)@(spec|test).[tj]s?(x)'],
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'config/jest/jestEmptyComponent.tsx'),
-        '^entities/(.*)': '<rootDir>\\src\\entities\\$1'
+        'entities/(.*)': '<rootDir>/src/entities/$1'
     },
     setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts']
     // Indicates whether the coverage information should be collected while executing the test
