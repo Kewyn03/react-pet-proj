@@ -7,7 +7,7 @@ import path from 'path'
 
 export default {
     globals: {
-        __IS_DEV__: true,
+        __IS_DEV__: true
     },
     clearMocks: true,
     testEnvironment: 'jsdom',
@@ -17,9 +17,10 @@ export default {
     testMatch: ['<rootDir>/src/**/*(*.)@(spec|test).[tj]s?(x)'],
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
-        '\\.svg': path.resolve(__dirname, 'config/jest/jestEmptyComponent.tsx')
+        '\\.svg': path.resolve(__dirname, 'config/jest/jestEmptyComponent.tsx'),
+        '^entities/(.*)': '<rootDir>\\src\\entities\\$1'
     },
-    setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts'],
+    setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts']
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
 
