@@ -1,0 +1,23 @@
+.Input {
+}
+
+.input {
+    width: 100%;
+    height: var(--input-height);
+    padding: 5px 12px;
+    border: 1px solid var(--icon-color);
+    border-radius: var(--input-border-radius);
+    outline: none;
+    transition: 0.3s filter;
+    cursor: pointer;
+    background: var(--hint-color);
+
+    &:focus {
+        border-color: var(--accent-color);
+        filter: drop-shadow(0 3px 10px rgb(16 55 163 / 60%));
+    }
+
+    &:hover {
+        filter: drop-shadow(0 3px 10px rgb(16 55 163 / 60%));
+    }
+}

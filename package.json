@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "webpack serve --env port=3000",
     "prod": "webpack serve --env mode=production port=3000",
+    "server": "json-server --watch ./json-server/db.json --port 5000",
+    "start:dev:server": "node ./json-server/index.js",
     "build:dev": "npx webpack --config webpack.config.ts --env mode=development",
     "build:prod": "npx webpack --config webpack.config.ts --env mode=production",
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
