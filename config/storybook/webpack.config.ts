@@ -10,7 +10,12 @@ export default ({ config }: { config: webpack.Configuration }) => {
         entry: '',
         src: path.resolve(__dirname, '..', '..', 'src')
     }
-    config.resolve?.modules?.push(paths.src)
+    if (config.resolve) {
+        config.resolve.modules = [
+            paths.src, 'node_modules'
+        ]
+    }
+
     config.resolve?.extensions?.push('.ts', '.tsx')
 
     if (config
@@ -39,6 +44,9 @@ export default ({ config }: { config: webpack.Configuration }) => {
         })
     }
     config.module?.rules?.push(buildCssLoader(true))
+    config.plugins?.push(new webpack.DefinePlugin({
+        __IS_DEV__: true
+    }))
 
     return config
 }
