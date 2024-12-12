@@ -1,5 +1,8 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import {
+    StoreDecorator
+} from 'shared/config/storybook/StoreDecorator/StoreDecorator'
 import { LoginModal } from './LoginModal'
 
 export default {
@@ -16,3 +19,9 @@ export const Primary = Template.bind({})
 Primary.args = {
     isOpen: true
 }
+Primary.decorators = [StoreDecorator({
+    loginForm: {
+        username: '123',
+        password: 'asd'
+    }
+})]

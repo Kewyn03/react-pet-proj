@@ -1,5 +1,7 @@
 {
+  "errorAuth": "Login or password incorrect",
   "password": "Password",
   "sign": "Sign",
+  "title": "Authorization Form",
   "username": "Username"
 }
