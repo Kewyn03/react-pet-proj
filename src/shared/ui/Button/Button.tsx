@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { ButtonHTMLAttributes, FC } from 'react'
 import cls from './Button.module.scss'
 
-export enum ButtonTheme {
+export const enum ButtonTheme {
     CLEAR = 'clear',
     CLEAR_INVERTED = 'clear-inverted',
     OUTLINE = 'outline',
