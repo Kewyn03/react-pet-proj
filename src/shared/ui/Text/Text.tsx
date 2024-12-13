@@ -2,6 +2,7 @@ import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
 
+import { memo } from 'react'
 import cls from './Text.module.scss'
 
 export const enum TextTheme {
@@ -16,7 +17,7 @@ interface ITextProps {
     theme?: TextTheme;
 }
 
-export const Text = ({
+export const Text = memo(({
     className = '',
     text,
     theme = TextTheme.PRIMARY,
@@ -31,4 +32,4 @@ export const Text = ({
             {text && <p className={cls.text}>{text}</p>}
         </div>
     )
-}
+})
