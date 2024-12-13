@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { LoginModal } from 'features/AuthByUsername'
 import { useDispatch, useSelector } from 'react-redux'
-import { getUserAuthData, userAction } from 'entities/User'
+import { getUserAuthData, userActions } from 'entities/User'
 import cls from './Navbar.module.scss'
 
 interface INavbarProps {
@@ -26,7 +26,7 @@ export const Navbar = memo(({ className = '' }: INavbarProps) => {
     }, [])
 
     const onLogout = useCallback(() => {
-        dispatch(userAction.logout())
+        dispatch(userActions.logout())
     }, [dispatch])
 
     if (authData) {

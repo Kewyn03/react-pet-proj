@@ -4,7 +4,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
 import { useDispatch } from 'react-redux'
-import { userAction } from 'entities/User'
+import { userActions } from 'entities/User'
 
 const App: FC = ({ children }) => {
     const { theme } = useTheme()
@@ -17,7 +17,7 @@ const App: FC = ({ children }) => {
     }, [theme])
 
     useLayoutEffect(() => {
-        dispatch(userAction.initAuthDate())
+        dispatch(userActions.initAuthData())
     }, [dispatch])
 
     return (
