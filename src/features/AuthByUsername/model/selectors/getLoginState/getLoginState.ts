@@ -1,3 +1,7 @@
-import { StateSchema } from 'app/providers/StoreProvider/config/StateSchema'
+import { StateSchema } from 'app/providers/StoreProvider'
 
-export const getLoginState = (state: StateSchema) => state?.loginForm
+export const getLoginState = (state: StateSchema) => state?.loginForm || {
+    isLoading: false,
+    username: '',
+    password: ''
+}
