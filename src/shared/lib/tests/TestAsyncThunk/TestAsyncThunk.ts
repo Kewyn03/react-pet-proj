@@ -1,10 +1,6 @@
 import axios, { AxiosStatic } from 'axios'
-import { User } from 'entities/User'
-import { ActionCreator, AsyncThunkAction, Dispatch } from '@reduxjs/toolkit'
+import { AsyncThunkAction } from '@reduxjs/toolkit'
 import { StateSchema } from 'app/providers/StoreProvider'
-import {
-    loginByUsername
-} from 'features/AuthByUsername/model/services/loginByUsername/loginByUsername'
 
 type ActionCreatorType<Return, Arg, RejectedValue> = (arg: Arg) => AsyncThunkAction<Return, Arg, {
     rejectValue: RejectedValue
@@ -12,7 +8,9 @@ type ActionCreatorType<Return, Arg, RejectedValue> = (arg: Arg) => AsyncThunkAct
 
 jest.mock('axios')
 
-const mockedAxios = jest.mocked(axios, true)
+const mockedAxios = jest.mocked(axios, {
+    shallow: false
+})
 
 export class TestAsyncThunk<Return, Arg, RejectedValue> {
     dispatch: jest.MockedFn<any>
