@@ -3,23 +3,35 @@ import { userReducer } from 'entities/User'
 import {
     createReducerManager
 } from 'app/providers/StoreProvider/config/reducerManager'
-import { DeepPartial } from 'redux'
-import { useDispatch } from 'react-redux'
+import { $api } from 'shared/api/api'
+import { NavigateOptions } from 'react-router'
 import { StateSchema } from './StateSchema'
 
-export function createReduxStore(initialState?: StateSchema, asyncReducers?: ReducersMapObject<StateSchema>) {
-    const rootReducer: ReducersMapObject<StateSchema> = {
+export function createReduxStore(
+    initialState?: StateSchema,
+    asyncReducers?: ReducersMapObject<StateSchema>,
+    navigate?: (to: string, options?: NavigateOptions) => void
+) {
+    const rootReducer: ReducersMapObject = {
         ...asyncReducers,
         user: userReducer
     }
 
     const reducerManager = createReducerManager(rootReducer)
 
-    const store = configureStore<StateSchema>({
+    const store = configureStore({
         // @ts-ignore
         reducer: reducerManager.reduce,
         devTools: __IS_DEV__,
-        preloadedState: initialState
+        preloadedState: initialState,
+        middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+            thunk: {
+                extraArgument: {
+                    api: $api,
+                    navigate
+                }
+            }
+        }) as any
     })
 
     // @ts-ignore

@@ -8,7 +8,7 @@ export const userSlice = createSlice({
     name: 'user',
     initialState,
     reducers: {
-        setAuthDate: (state, action: PayloadAction<User>) => {
+        setAuthData: (state, action: PayloadAction<User>) => {
             state.authData = action.payload
         },
         initAuthDate: (state) => {
@@ -24,5 +24,5 @@ export const userSlice = createSlice({
     }
 })
 
-export const { actions: userAction } = userSlice
+export const { actions: userActions } = userSlice
 export const { reducer: userReducer } = userSlice

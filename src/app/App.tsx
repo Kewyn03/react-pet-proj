@@ -1,6 +1,4 @@
-import React, {
-    FC, Suspense, useEffect, useLayoutEffect
-} from 'react'
+import React, { FC, Suspense, useLayoutEffect } from 'react'
 import { useTheme } from 'app/providers/ThemeProvider'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Navbar } from 'widgets/Navbar'
