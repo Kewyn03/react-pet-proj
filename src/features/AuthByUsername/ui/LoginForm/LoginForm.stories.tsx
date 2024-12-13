@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import {
     StoreDecorator
 } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
-import { LoginForm } from './LoginForm'
+import LoginForm from './LoginForm'
 
 export default {
     title: 'features/LoginForm',
@@ -20,6 +20,7 @@ Primary.args = {}
 Primary.decorators = [StoreDecorator({
     loginForm: {
         username: '123',
-        password: 'asd'
+        password: 'asd',
+        isLoading: false
     }
-})]
+}, {})]
