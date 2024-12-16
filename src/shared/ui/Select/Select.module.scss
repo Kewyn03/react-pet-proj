@@ -1,0 +1,19 @@
+.Wrapper {
+    display: flex;
+}
+
+.label {
+    margin-right: 5px;
+}
+
+.select {
+    background: none;
+    color: var(--text-color);
+    padding-right: 10px;
+    border: 1px solid var(--accent-color);
+}
+
+.option {
+    color: var(--inverted-text-color);
+    background: var(--inverted-bg-color);
+}

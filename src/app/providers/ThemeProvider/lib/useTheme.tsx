@@ -20,7 +20,7 @@ export function useTheme(): IUseThemeResult {
     }
 
     return {
-        theme,
+        theme: theme || Theme.LIGHT,
         toggleTheme
     }
 }

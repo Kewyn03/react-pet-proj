@@ -55,6 +55,7 @@ module.exports = {
         'no-param-reassign': 'off',
         '@typescript-eslint/no-unused-vars': 'off',
         'react/jsx-no-useless-fragment': 'off',
+        'no-undef': 'off'
     },
     globals: {
         __IS_DEV__: true,

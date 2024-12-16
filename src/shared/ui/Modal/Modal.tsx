@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames, TMods } from 'shared/lib/classNames/classNames'
 
 import React, {
     ReactNode, useCallback, useEffect, useRef
@@ -52,7 +52,7 @@ export const Modal = (props: IModalProps) => {
         }
     }, [closeHandler])
 
-    const mods: Record<string, boolean> = {
+    const mods: TMods = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing
     }
