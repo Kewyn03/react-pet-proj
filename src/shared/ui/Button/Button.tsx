@@ -1,15 +1,15 @@
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames, TMods } from 'shared/lib/classNames/classNames'
 
 import {
     ButtonHTMLAttributes, FC, memo, ReactNode
 } from 'react'
-import { ButtonProps } from '@storybook/components'
 import cls from './Button.module.scss'
 
 export const enum ButtonTheme {
     CLEAR = 'clear',
     CLEAR_INVERTED = 'clear-inverted',
     OUTLINE = 'outline',
+    OUTLINE_RED = 'outline_red',
     BACKGROUND = 'background',
     BACKGROUND_INVERTED = 'backgroundInverted',
 }
@@ -40,7 +40,7 @@ export const Button = memo((props: IButtonProps) => {
         ...otherProps
     } = props
 
-    const mods: Record<string, boolean> = {
+    const mods: TMods = {
         [cls.square]: square,
         [cls[size]]: true,
         [cls.disabled]: disabled
