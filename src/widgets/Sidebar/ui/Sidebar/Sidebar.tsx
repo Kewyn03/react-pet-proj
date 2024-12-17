@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 
-import React, { memo, useMemo, useState } from 'react'
+import React, { memo, useState } from 'react'
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher'
 import { LangSwitcher } from 'widgets/LangSwitcher'
 import { useTranslation } from 'react-i18next'
