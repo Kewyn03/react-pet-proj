@@ -3,15 +3,14 @@ import { useTheme } from 'app/providers/ThemeProvider'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { getUserMounted, userActions } from 'entities/User'
-import { useAppSelector } from 'shared/lib/hooks/useAppSelector/useAppSelector'
 
 const App: FC = ({ children }) => {
     const { theme } = useTheme()
     const dispatch = useDispatch()
 
-    const mounted = useAppSelector(getUserMounted)
+    const mounted = useSelector(getUserMounted)
 
     useLayoutEffect(() => {
         if (document.body.className === '') {
