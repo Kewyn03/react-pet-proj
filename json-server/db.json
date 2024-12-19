@@ -4,13 +4,15 @@
       "id": "1",
       "username": "admin",
       "password": "123123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://shapka-youtube.ru/wp-content/uploads/2024/08/avatarka-ananasa.jpg"
     },
     {
       "id": "2",
       "username": "fanera",
       "password": "123123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://cdn.prod.website-files.com/62d84e447b4f9e7263d31e94/6399a4d27711a5ad2c9bf5cd_ben-sweet-2LowviVHZ-E-unsplash-1.jpeg"
     }
   ],
   "profile": {
@@ -97,19 +99,19 @@
   "comments": [
     {
       "id": "1",
-      "body": "some comment",
+      "text": "some comment",
       "articleId": "1",
       "userId": "1"
     },
     {
       "id": "3",
-      "body": "another",
+      "text": "another",
       "articleId": "1",
       "userId": "1"
     },
     {
       "id": "3",
-      "body": "third",
+      "text": "third",
       "articleId": "1",
       "userId": "1"
     }
