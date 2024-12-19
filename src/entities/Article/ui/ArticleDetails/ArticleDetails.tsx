@@ -23,6 +23,9 @@ import {
     ArticleTextBlockComponent
 } from 'entities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent'
 import {
+    useInitialEffect
+} from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
+import {
     getArticleDetailsData,
     getArticleError,
     getArticleIsLoading
@@ -84,9 +87,9 @@ export const ArticleDetails = memo(({
         }
     }, [])
 
-    useEffect(() => {
+    useInitialEffect(() => {
         dispatch(fetchArticleById(id))
-    }, [dispatch, id])
+    })
 
     let content
 
