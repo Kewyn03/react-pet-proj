@@ -1,11 +1,9 @@
-import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
 
 import { memo } from 'react'
 import { ArticleDetails } from 'entities/Article'
 import { useParams } from 'react-router'
-import cls from './ArticleDetailsPage.module.scss'
 
 interface IArticleDetailsPageProps {
     className?: string;
@@ -18,7 +16,7 @@ const ArticleDetailsPage = ({ className = '' }: IArticleDetailsPageProps) => {
     if (!id) {
         return (
             <div
-                className={classNames(cls.ArticleDetailsPage, {}, [className])}
+                className={classNames('', {}, [className])}
             >
                 {t('article-not-found')}
             </div>
@@ -26,7 +24,7 @@ const ArticleDetailsPage = ({ className = '' }: IArticleDetailsPageProps) => {
     }
 
     return (
-        <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+        <div className={classNames('', {}, [className])}>
             <ArticleDetails id={id} />
         </div>
     )
