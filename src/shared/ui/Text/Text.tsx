@@ -16,12 +16,18 @@ export const enum TextAlign {
     CENTER = 'center',
 }
 
+export const enum TextSize {
+    M = 'size_m',
+    L = 'size_l'
+}
+
 interface ITextProps {
     className?: string;
     title?: string;
     text?: string;
     theme?: TextTheme;
     align?: TextAlign;
+    size?: TextSize;
 }
 
 export const Text = memo(({
@@ -29,13 +35,15 @@ export const Text = memo(({
     text,
     theme = TextTheme.PRIMARY,
     title,
-    align = TextAlign.LEFT
+    align = TextAlign.LEFT,
+    size = TextSize.M
 }: ITextProps) => {
     const { t } = useTranslation()
 
     const mods: TMods = {
         [cls[theme]]: true,
-        [cls[align]]: true
+        [cls[align]]: true,
+        [cls[size]]: true
     }
 
     return (
